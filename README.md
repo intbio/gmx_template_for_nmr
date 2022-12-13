@@ -17,12 +17,12 @@ gmx_template is a veratile pipeline to setup and perform MD simulations using Gr
 3. [2_min_equil.ipynb](2_min_equil.ipynb) (required) - energy minimization and 5-step equilibration and 100 ns MD run (GMX_run_prep folder) 
 
 **2 step** - 2 us MD 
-4. [3_1_prepare_gmx_system_amber_tip3p.ipynb](3_1_prepare_gmx_system_amber_tip3p.ipynb) (required) -the same as 1st step but for condenced system; use appropriate water model prefix 
-5. [3_2_min_equil.ipynb](3_2_min_equil.ipynb) (required) -  energy minimization and equilibration step 
-6. [4_1_production_tpr.ipynb](4_1_production_tpr.ipynb) (required) - preparation of tpr file(s) for MD 
-7. [4_2_production_start_run.ipynb](4_2_production_start_run.ipynb) (required) - MD simulation run (on Lomonosov supercomputer)
-8. [5_trj_preprocessing.ipynb](5_trj_preprocessing.ipynb) (required) - trajectory preprocessing 
-9. [6_0_quality_control.ipynb](6_0_quality_control.ipynb) - analysis of temperature, presure etc, periodic images 
+1. [3_1_prepare_gmx_system_amber_tip3p.ipynb](3_1_prepare_gmx_system_amber_tip3p.ipynb) (required) -the same as 1st step but for condenced system; use appropriate water model prefix 
+2. [3_2_min_equil.ipynb](3_2_min_equil.ipynb) (required) -  energy minimization and equilibration step 
+3. [4_1_production_tpr.ipynb](4_1_production_tpr.ipynb) (required) - preparation of tpr file(s) for MD 
+4. [4_2_production_start_run.ipynb](4_2_production_start_run.ipynb) (required) - MD simulation run (on Lomonosov supercomputer)
+5. [5_trj_preprocessing.ipynb](5_trj_preprocessing.ipynb) (required) - trajectory preprocessing 
+6. [6_0_quality_control.ipynb](6_0_quality_control.ipynb) - analysis of temperature, presure etc, periodic images 
 
 ## Setting up your run
 [config.py](config.py) - modify config.py 

@@ -16,7 +16,7 @@ gmx_template is a veratile pipeline to setup and perform MD simulations using Gr
 2. [1_2_restraints.ipynb](1_2_restraints.ipynb) (optional) -in the case if we want to restrict melting of terminal DNA base pairs  
 3. [2_min_equil.ipynb](2_min_equil.ipynb) (required) - energy minimization and 5-step equilibration and 100 ns MD run (GMX_run_prep folder) 
 
-Note! The result of the step is in the GMX_system_prep/sys_condensed.pdb file 
+Note! The result of the step is in the **GMX_system_prep/sys_condensed.pdb** file 
 
 **2 step** - 2 us MD 
 1. [3_1_prepare_gmx_system_amber_tip3p.ipynb](3_1_prepare_gmx_system_amber_tip3p.ipynb) (required) -the same as 1st step but for condenced system; use appropriate water model prefix 

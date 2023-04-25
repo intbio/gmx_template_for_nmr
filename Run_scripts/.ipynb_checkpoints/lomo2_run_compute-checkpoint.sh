@@ -5,8 +5,8 @@
 #SBATCH -o ogmx.%j
 #SBATCH -e egmx.%j
 #SBATCH -N 10
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=14
+#SBATCH --ntasks-per-node=2
+#SBATCH --cpus-per-task=7
 
 # N - number of nodes, 
 # --ntasks-per-node - amount of MPI tasks to run on one node
@@ -26,8 +26,11 @@ exit -1
 fi
 fi
 
+mpirun -np $mpitasks gmx_mpi mdrun -ntomp $OMP_NUM_THREADS -gputasks 00 -pme cpu -nb gpu -deffnm $1
 
-mpirun -np $mpitasks gmx_mpi mdrun -npme 0 -nb gpu -pme gpu -pmefft gpu -notunepme -update gpu -ntomp $OMP_NUM_THREADS -deffnm $1
+# mpirun -np $mpitasks gmx_mpi mdrun  -ntomp $OMP_NUM_THREADS -npme 0 -nb gpu -pme gpu -pmefft gpu -notunepme -update gpu -deffnm $1
+# 
+
 
 #Script should be run with 
 #module load slurm gromacs/2018-gcc

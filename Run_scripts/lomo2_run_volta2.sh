@@ -1,11 +1,11 @@
 #!/bin/bash -l
-#SBATCH -t 7-00:00:00
-#SBATCH -p compute
+#SBATCH -t 2-00:00:00
+#SBATCH -p volta2
 #SBATCH -J jobname
 #SBATCH -o ogmx.%j
 #SBATCH -e egmx.%j
 #SBATCH -N 10
-#SBATCH --ntasks-per-node=1
+#SBATCH --ntasks-per-node=2
 #SBATCH --cpus-per-task=18
 
 # N - number of nodes, 
@@ -28,7 +28,7 @@ fi
 fi
 
 
-mpirun -np $mpitasks gmx_mpi mdrun -npme 0 -nb gpu -pme gpu -pmefft gpu -notunepme -update gpu -ntomp $OMP_NUM_THREADS -deffnm $1
+mpirun -np $mpitasks gmx_mpi mdrun -npme 0 -nb gpu -pme gpu -pmefft gpu -notunepme -update gpu -ntomp $OMP_NUM_THREADS -deffnm $1 multidir `seq -s ' ' 0 $2` 
 
 #Script should be run with 
 #module load slurm gromacs/2018-gcc

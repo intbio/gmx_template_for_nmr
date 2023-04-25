@@ -16,7 +16,7 @@ gmx_eq_cmd='gmx mdrun -npme 0 -nb gpu -pme gpu -pmefft gpu -notunepme -ntomp 20 
 
 noappend='' #'-noappend' or '' STRICTLY! This will trigger no append functionality in mdrun - i.e. on relaunch new trj will we written. The 5_trj ... scripts will then concat the trjs. This need twice the amount of disk space!!!
 
-gen_parallel_tpr='False' #or True
+gen_parallel_tpr='True' #or False if you prefer compute nodes$ Ture for volta2 
 
 prot_url="https://api.github.com/repos/intbio/gmx_protocols/contents/amber_gmx2020" #MD protocols
 
